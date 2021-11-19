@@ -6,11 +6,11 @@ Yida Zhang
 ## 0.Create the canvas with video capture
     function setup() {
       // canvas size
-      createCanvas(800, 800);
+      createCanvas(// width, // height);
       pixelDensity(1);
       video = createCapture(VIDEO);
       // video size
-      video.size(800, 800);
+      video.size(// width, // height);
      }
       function draw() {
       background(51);
@@ -56,18 +56,16 @@ copy the pixels to the designated column:
      let x = 0;
 
      function setup() {
-       createCanvas(800, 800);
+       createCanvas(// width, // height);
        pixelDensity(0.2);
        video = createCapture(VIDEO);
-       video.size(800, 800);
+       video.size(// width, //height);
        background(51);
      }
 
      function draw() {
-       video.loadPixels();
-       let w = video.width;
-       let h = video.height;
-       copy(video, w/2, 0, 1, h, x, 0, 1, h);
+       video.loadPixels()
+       copy(video, width/2, 0, 1, height, x, 0, 1, height);
        x = x + 1;
        if (x > width) {
          x = 0;

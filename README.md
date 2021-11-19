@@ -51,15 +51,17 @@ copy the pixels to the designated column:
      
 # Congrats! You now just have to put the codes togetehr!
 
-          let video;
+// amend your canvas/video dimension as you wish
+
+         let video;
 
      let x = 0;
 
      function setup() {
-       createCanvas(// canvas width, // canvas height);
+       createCanvas(800, 240);
        pixelDensity(1);
        video = createCapture(VIDEO);
-       video.size(// video width, // video height);
+       video.size(320, 240);
        background(51);
      }
 

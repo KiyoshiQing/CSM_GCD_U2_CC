@@ -56,10 +56,10 @@ copy the pixels to the designated column:
      let x = 0;
 
      function setup() {
-       createCanvas(800, 240);
+       createCanvas(// canvas width, // canvas height);
        pixelDensity(1);
        video = createCapture(VIDEO);
-       video.size(320, 240);
+       video.size(// video width, // video height);
        background(51);
      }
 

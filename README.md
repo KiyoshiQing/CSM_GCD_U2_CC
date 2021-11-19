@@ -51,21 +51,23 @@ copy the pixels to the designated column:
      
 # Congrats! You now just have to put the codes togetehr!
 
-     let video;
+          let video;
 
      let x = 0;
 
      function setup() {
-       createCanvas(// width, // height);
-       pixelDensity(0.2);
+       createCanvas(800, 240);
+       pixelDensity(1);
        video = createCapture(VIDEO);
-       video.size(// width, //height);
+       video.size(320, 240);
        background(51);
      }
 
      function draw() {
-       video.loadPixels()
-       copy(video, width/2, 0, 1, height, x, 0, 1, height);
+       video.loadPixels();
+       let w = video.width;
+       let h = video.height;
+       copy(video, w/2, 0, 1, h, x, 0, 1, h);
        x = x + 1;
        if (x > width) {
          x = 0;
